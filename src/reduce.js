@@ -3,7 +3,7 @@
 
 const reduce = (arr, reduceFunction,actualValue) =>{
 
-	let reduceValue;
+	var reduceValue;
 
 	if(actualValue == undefined)
 	{
