@@ -6,7 +6,7 @@ describe('Tail', () => {
         expect(tail([1,2,3])).toEqual([2,3]);
     });
 
-    it('Head of [] is undefined', () => {
+    it('Tail of [] is []', () => {
         expect(tail([])).toEqual([]);
     });
 
