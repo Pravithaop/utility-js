@@ -24,7 +24,7 @@ const reduce = (arr, reduceFunction,actualValue) =>{
 	
 	for(let i=0; i < arr.length ;i++)
 	{
-		reduceValue = reduceFunction(reduceValue, arr[i], i, arr);
+		reduceValue = reduceFunction(reduceValue, arr[i]);
 	}
 	return reduceValue;
 

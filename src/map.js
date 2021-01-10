@@ -3,7 +3,7 @@ const map = (arr , applyFunction) =>{
 	var functionAppliedArray = [];
 
 	for(let i=0 ; i< arr.length ; i++){
-		var mapValue = applyFunction(arr[i],i,arr);
+		var mapValue = applyFunction(arr[i]);
 		functionAppliedArray.push(mapValue);
 
 	}
