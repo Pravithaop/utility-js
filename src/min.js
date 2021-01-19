@@ -1,17 +1,7 @@
-function minValue(x,y){
-        if(x < y){
-                return x;}
-        return y;
-}
+const reduce = require('./reduce');
 
-
-
-
-const min = (arr,length) => {
-    if(length  == 1){
-        return arr[0];
-        }
-        return minValue(arr[length-1],min(arr,length - 1));
-}
+const min = (array) => {
+	return reduce(array,((x,y)=> x <= y ? x : y));
+    }
 
 module.exports = min;
