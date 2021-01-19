@@ -1,25 +1,7 @@
-function maxValue(x,y){
-	if(x > y){
-		return x;}
-	return y;
-}
+const max = require('./max');
 
-
-
-
-const max = (arr,length) => {
-    if(length  == 1){
-	return arr[0];	
-	}
-	return maxValue(arr[length-1],max(arr,length - 1));
-}
+const max = (array) => {
+	return reduce([1,2,3,4],((x,y)=> x > y , x : y));
+    }
 
 module.exports = max;
-
-
-
-
-
-
-
-
