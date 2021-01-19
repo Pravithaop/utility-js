@@ -1,33 +1,13 @@
 
+const head = require('./head');
+const tail = require('./tail');
 
 
-const reduce = (arr, reduceFunction,actualValue) =>{
+const reduce = (array , reduceFunction , actualValue) =>{
+	if(head(array) === undefined) return actualValue;
 
-	var reduceValue;
-
-	if(actualValue == undefined)
-	{
-		if(typeof(arr[0])=="number"){
-			reduceValue = 0;
-		}
-		else if(typeof(arr[0])== "string"){
-			reduceValue="";
-		}
-		else{
-			reduceValue = undefined; }
-
-	}
-	else{
-		reduceValue = actualValue; 
-	}
-
+	return reduce(tail(array),reduceFunction,actualValue ? (reduceFunction(actualValue,head(array))) : (head(array)));
 	
-	for(let i=0; i < arr.length ;i++)
-	{
-		reduceValue = reduceFunction(reduceValue, arr[i]);
-	}
-	return reduceValue;
-
 
 }
 module.exports = reduce;
