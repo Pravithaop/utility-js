@@ -6,8 +6,8 @@ describe('Max', () => {
         expect(max([1,2,3,4])).toEqual(4);
     });
 
-    it('Max of [5,8,3] is 9', () => {
-        expect(max([5,8,9])).toEqual(9);
+    it('Max of [5,9,8] is 9', () => {
+        expect(max([5,9,8])).toEqual(9);
     });
 
 })
