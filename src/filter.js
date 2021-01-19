@@ -1,41 +1,10 @@
 const head = require('./head');
 const tail = require('./tail');
 
-const filter = (arr , filterFunction) =>{
-	if (head(arr) === undefined) return [];
-	return (filterFunction(head(arr)) ? [head(arr)] : []) .concat(filter(tail(arr),filterFunction));
+const filter = (array , filterFunction) =>{
+	if (head(array) === undefined) return [];
+	return (filterFunction(head(array)) ? [head(array)] : []) .concat(filter(tail(array),filterFunction));
 	
 }
 
 module.exports = filter;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

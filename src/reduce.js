@@ -11,33 +11,3 @@ const reduce = (array , reduceFunction , actualValue) =>{
 
 }
 module.exports = reduce;
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

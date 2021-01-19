@@ -1,32 +1,9 @@
 const head = require('./head');
 const tail = require('./tail');
-const map = (arr , applyFunction) =>{
+const map = (array , applyFunction) =>{
 
-	if(head(arr)==undefined) return [];
-	return [applyFunction(head(arr))].concat(map(tail(arr),applyFunction));
+	if(head(array)==undefined) return [];
+	return [applyFunction(head(array))].concat(map(tail(array),applyFunction));
 }
 
 module.exports = map;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
