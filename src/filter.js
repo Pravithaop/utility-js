@@ -1,16 +1,10 @@
-const filter = (arr , applyFunction) =>{
+const head = require('./head');
+const tail = require('./tail');
 
-        var functionAppliedArray = [];
-
-        for(let i=0 ; i< arr.length ; i++){
-                var filterValue = applyFunction(arr[i]);
-		if(filterValue){
-                functionAppliedArray.push(arr[i]);
-		}
-
-        }
-
-        return functionAppliedArray;
+const filter = (arr , filterFunction) =>{
+	if (head(arr) === undefined) return [];
+	return (filterFunction(head(arr)) ? [head(arr)] : []) .concat(filter(tail(arr),filterFunction));
+	
 }
 
 module.exports = filter;
